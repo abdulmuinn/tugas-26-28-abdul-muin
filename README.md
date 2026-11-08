@@ -1,9 +1,9 @@
 # Mini Project 7 — Sistem Kredit Bank Nusantara
 
-**Nama:** [Isi nama lengkap]  
+**Nama:** Abdul Muin  
 **Program:** Full Stack Bangalore — Mini Project 7, Pertemuan 26–28  
 **Studi kasus:** Bank Nusantara (fiktif)  
-**Status:** Implementasi Bagian A, B, C telah dijalankan lokal; beberapa bukti final masih harus dilengkapi.
+**Status:** Bagian A, B, dan C berhasil dijalankan secara lokal; 8 unit test lulus. Champion dan monitoring telah diverifikasi melalui log eksperimen. Bukti implementasi tersedia pada repository.
 
 ## Gambaran sistem
 
@@ -63,12 +63,12 @@ Pipeline lokal sudah melatih ketiga kandidat dan berhasil mendaftarkan **`credit
 
 **Bukti MLflow:**
 
-- [ ] Simpan screenshot perbandingan run ke `screenshots/mlflow_runs.png`.
-- [ ] Simpan screenshot registry dan alias champion ke `screenshots/mlflow_registry.png`.
+- [x] [Screenshot eksperimen tiga kandidat](screenshots/mlflow_runs.png).
+- [x] [Screenshot Model Registry dan alias champion](screenshots/mlflow_registry.png).
 
-**Bukti negative test gate (wajib):** [Belum dijalankan / tempel output eksperimen ROC-AUC minimum 0,95. Pastikan nilai dikembalikan ke 0,70 setelah eksperimen.]
+**Bukti negative test quality gate:** Pemeriksaan langsung fungsi `check()` dengan ambang ROC-AUC 0,95 dan recall bad 0,50 untuk Random Forest menghasilkan `(False, ['roc_auc 0.763 < 0.95'])`. Pengujian ini membuktikan fungsi gate menolak kandidat yang tidak mencapai ambang; **belum membuktikan seluruh pipeline berhenti ketika semua kandidat gagal**. Ambang normal pada kode tetap ROC-AUC 0,70 dan recall bad 0,50.
 
-**Bukti idempotensi promosi (wajib):** [Belum diuji / jalankan pipeline ulang tanpa perubahan data atau konfigurasi; tulis apakah alias champion tetap mengarah ke versi yang sama, dan alasan model baru tidak dipromosikan.]
+**Bukti idempotensi promosi:** Pipeline dijalankan ulang dengan alasan `uji idempotensi promosi`. Seluruh 8 unit test lulus, dan tiga kandidat menghasilkan metrik yang sama. Model `credit-risk` **versi 2** berhasil diregistrasi, tetapi tidak menggantikan champion karena log menampilkan `TIDAK PROMOTE: AUC baru 0.7629 <= champion lama 0.7629 (versi 1)`. Dengan demikian, *promosi alias* terlindungi dari kandidat tanpa peningkatan; **pipeline keseluruhan tidak sepenuhnya idempotent** karena masih membuat run dan model version baru.
 
 ## Bagian C — Model Monitoring
 
@@ -103,11 +103,13 @@ Laporan tambahan: `reports/monitoring_report.md`, `reports/drift_metrics.csv`, `
 
 **Eksperimen berikutnya:** Kumpulkan label baru yang layak, latih ulang kandidat pada data yang relevan, bandingkan AUC/recall, kalibrasi probabilitas, dan uji dampak keputusan kredit sebelum mempertimbangkan penggantian champion.
 
-## Bukti yang masih perlu diselesaikan sebelum submit
+## Checklist akhir pengumpulan
 
-- [ ] Screenshot `screenshots/mlflow_runs.png` dan `screenshots/mlflow_registry.png` benar-benar tersimpan.
-- [ ] Negative test quality gate 0,95 dilakukan dan dikembalikan ke 0,70; catat output gagal.
-- [ ] Uji pipeline kedua tanpa perubahan, pastikan champion lama tidak terganti jika kandidat tidak lebih baik.
-- [ ] Periksa `SOP.md` berisi prosedur konkret, panjang maksimal satu halaman.
-- [ ] Verifikasi `git status`, `git check-ignore` untuk `.venv`, MLflow DB, dan artefak besar.
-- [ ] Verifikasi repository GitHub dan instruksi clean clone; kirim link ke mentor.
+- [x] Screenshot `screenshots/mlflow_runs.png` dan `screenshots/mlflow_registry.png` disimpan dan masuk commit `e6bf999`.
+- [x] Negative test **fungsi** quality gate ROC-AUC 0,95 menolak model (lihat hasil di atas).
+- [ ] Negative test **seluruh pipeline** dengan gate ROC-AUC 0,95, jika diwajibkan penilaian; verifikasi tidak ada registrasi/promosi setelah semua kandidat gagal.
+- [x] Uji pipeline kedua tanpa perubahan: versi 2 dibuat, tetapi champion versi 1 tidak dipromosikan ulang.
+- [ ] Pastikan `SOP.md` sesuai batas maksimal satu halaman saat diekspor/ditampilkan.
+- [x] `.gitignore` mencegah `.venv`, `mlflow.db`, `mlruns` dan `.env` masuk staging; pemeriksaan staging dilakukan.
+- [x] Repository GitHub menerima commit `e58a6b3` dan `e6bf999` pada branch `main`.
+- [ ] Verifikasi akhir dan kirim [tautan repository](https://github.com/abdulmuinn/tugas-26-28-abdul-muin) kepada mentor. (Belum mengklaim sudah disubmit.)
