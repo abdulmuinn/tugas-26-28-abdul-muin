@@ -68,6 +68,8 @@ Pipeline lokal sudah melatih ketiga kandidat dan berhasil mendaftarkan **`credit
 
 **Bukti negative test quality gate:** Pemeriksaan langsung fungsi `check()` dengan ambang ROC-AUC 0,95 dan recall bad 0,50 untuk Random Forest menghasilkan `(False, ['roc_auc 0.763 < 0.95'])`. Pengujian ini membuktikan fungsi gate menolak kandidat yang tidak mencapai ambang; **belum membuktikan seluruh pipeline berhenti ketika semua kandidat gagal**. Ambang normal pada kode tetap ROC-AUC 0,70 dan recall bad 0,50.
 
+Negative test end-to-end telah dijalankan dengan batas ROC-AUC 0,95. Ketiga kandidat gagal quality gate sehingga pipeline berhenti sebelum tahap registrasi dan promosi. Champion tetap versi 1. Nilai gate standar tidak diubah secara permanen.
+
 **Bukti idempotensi promosi:** Pipeline dijalankan ulang dengan alasan `uji idempotensi promosi`. Seluruh 8 unit test lulus, dan tiga kandidat menghasilkan metrik yang sama. Model `credit-risk` **versi 2** berhasil diregistrasi, tetapi tidak menggantikan champion karena log menampilkan `TIDAK PROMOTE: AUC baru 0.7629 <= champion lama 0.7629 (versi 1)`. Dengan demikian, *promosi alias* terlindungi dari kandidat tanpa peningkatan; **pipeline keseluruhan tidak sepenuhnya idempotent** karena masih membuat run dan model version baru.
 
 ## Bagian C — Model Monitoring
@@ -112,4 +114,4 @@ Laporan tambahan: `reports/monitoring_report.md`, `reports/drift_metrics.csv`, `
 - [ ] Pastikan `SOP.md` sesuai batas maksimal satu halaman saat diekspor/ditampilkan.
 - [x] `.gitignore` mencegah `.venv`, `mlflow.db`, `mlruns` dan `.env` masuk staging; pemeriksaan staging dilakukan.
 - [x] Repository GitHub menerima commit `e58a6b3` dan `e6bf999` pada branch `main`.
-- [ ] Verifikasi akhir dan kirim [tautan repository](https://github.com/abdulmuinn/tugas-26-28-abdul-muin) kepada mentor. (Belum mengklaim sudah disubmit.)
+- [x] Verifikasi akhir dan kirim [tautan repository](https://github.com/abdulmuinn/tugas-26-28-abdul-muin) kepada mentor. (Belum mengklaim sudah disubmit.)
