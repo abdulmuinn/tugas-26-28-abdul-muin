@@ -1,0 +1,61 @@
+mode,question,expected_doc,top1,sources,hit3,top_score,fallback,latency_ms
+dense,Berapa umur minimal untuk mengajukan KTA?,K01,K01,K01|K01|K02,True,0.8147860765457153,False,28.346999955829233
+dense,Berapa lama harus bekerja sebelum boleh mengajukan kredit?,K01,K01,K01|K06|K01,True,0.6598650813102722,False,34.508699958678335
+dense,Berapa pinjaman maksimal yang bisa diajukan?,K02,K02,K02|K07|K06,True,0.6824666261672974,False,26.59500000299886
+dense,Berapa batas cicilan dibanding gaji?,K02,K01,K01|K03|K06,False,0.5136333107948303,False,25.884400005452335
+dense,Apakah bunga bisa naik di tengah masa pinjaman?,K03,K02,K02|K03|K06,True,0.5601110458374023,False,25.372999953106046
+dense,Apakah karyawan payroll dapat potongan bunga?,K03,K03,K03|K04|K01,True,0.5414921045303345,False,26.38160000788048
+dense,Kapan NPWP wajib dilampirkan?,K04,K04,K04|K08|K06,True,0.48412060737609863,False,29.28539999993518
+dense,"Saya wiraswasta tanpa slip gaji, dokumen apa penggantinya?",K04,K04,K04|K04|K01,True,0.5372287631034851,False,30.674599984195083
+dense,Skor berapa yang langsung ditolak?,K05,K05,K05|K08|K05,True,0.5636334419250488,False,27.8612999827601
+dense,Berapa denda kalau telat bayar cicilan?,K06,K06,K06|K07|K03,True,0.6114205121994019,False,27.93869999004528
+dense,Berapa penalti kalau melunasi pinjaman lebih cepat?,K07,K07,K07|K02|K06,True,0.7673103213310242,False,29.35480000451207
+dense,Berapa lama pengaduan saya akan dijawab?,K08,K08,K08|K02|K01,True,0.534692645072937,False,28.93149998271838
+dense,Siapa pemenang Piala Dunia 2022?,NONE,,,False,0.18622389435768127,True,26.961800002027303
+dense,Bagaimana cara membuat nasi goreng?,NONE,,,False,0.10989037156105042,True,27.487400046084076
+dense,Berapa harga emas hari ini?,NONE,,,False,0.21669703722000122,True,27.71049999864772
+bm25,Berapa umur minimal untuk mengajukan KTA?,K01,K06,K06|K04|K07,False,0.8147860765457153,False,29.45709996856749
+bm25,Berapa lama harus bekerja sebelum boleh mengajukan kredit?,K01,K06,K06|K02|K01,True,0.6598650813102722,False,28.616600029636174
+bm25,Berapa pinjaman maksimal yang bisa diajukan?,K02,K07,K07|K02|K06,True,0.6824666261672974,False,27.3103000363335
+bm25,Berapa batas cicilan dibanding gaji?,K02,K06,K06|K04|K07,False,0.5136333107948303,False,26.547699992079288
+bm25,Apakah bunga bisa naik di tengah masa pinjaman?,K03,K03,K03|K03|K03,True,0.5601110458374023,False,29.178299999330193
+bm25,Apakah karyawan payroll dapat potongan bunga?,K03,K03,K03|K03|K01,True,0.5414921045303345,False,30.530999996699393
+bm25,Kapan NPWP wajib dilampirkan?,K04,K04,K04|K01|K04,True,0.48412060737609863,False,29.25439999671653
+bm25,"Saya wiraswasta tanpa slip gaji, dokumen apa penggantinya?",K04,K04,K04|K04|K01,True,0.5372287631034851,False,29.98180000577122
+bm25,Skor berapa yang langsung ditolak?,K05,K08,K08|K05|K05,True,0.5636334419250488,False,25.748099957127124
+bm25,Berapa denda kalau telat bayar cicilan?,K06,K06,K06|K06|K05,True,0.6114205121994019,False,26.467800023965538
+bm25,Berapa penalti kalau melunasi pinjaman lebih cepat?,K07,K07,K07|K06|K02,True,0.7673103213310242,False,28.447200020309538
+bm25,Berapa lama pengaduan saya akan dijawab?,K08,K08,K08|K08|K08,True,0.534692645072937,False,29.24980001989752
+bm25,Siapa pemenang Piala Dunia 2022?,NONE,,,False,0.18622389435768127,True,27.982299972791225
+bm25,Bagaimana cara membuat nasi goreng?,NONE,,,False,0.10989037156105042,True,26.127699995413423
+bm25,Berapa harga emas hari ini?,NONE,,,False,0.21669703722000122,True,26.58010000595823
+hybrid,Berapa umur minimal untuk mengajukan KTA?,K01,K01,K01|K07|K01,True,0.8147860765457153,False,27.231400017626584
+hybrid,Berapa lama harus bekerja sebelum boleh mengajukan kredit?,K01,K01,K01|K06|K01,True,0.6598650813102722,False,26.828000030945987
+hybrid,Berapa pinjaman maksimal yang bisa diajukan?,K02,K02,K02|K07|K06,True,0.6824666261672974,False,29.46890000021085
+hybrid,Berapa batas cicilan dibanding gaji?,K02,K06,K06|K03|K04,False,0.5136333107948303,False,29.181000019889325
+hybrid,Apakah bunga bisa naik di tengah masa pinjaman?,K03,K03,K03|K02|K07,True,0.5601110458374023,False,26.20359999127686
+hybrid,Apakah karyawan payroll dapat potongan bunga?,K03,K03,K03|K01|K06,True,0.5414921045303345,False,27.487299987114966
+hybrid,Kapan NPWP wajib dilampirkan?,K04,K04,K04|K04|K01,True,0.48412060737609863,False,26.146600022912025
+hybrid,"Saya wiraswasta tanpa slip gaji, dokumen apa penggantinya?",K04,K04,K04|K04|K01,True,0.5372287631034851,False,28.72379997279495
+hybrid,Skor berapa yang langsung ditolak?,K05,K05,K05|K08|K05,True,0.5636334419250488,False,25.820499984547496
+hybrid,Berapa denda kalau telat bayar cicilan?,K06,K06,K06|K06|K06,True,0.6114205121994019,False,26.45840001059696
+hybrid,Berapa penalti kalau melunasi pinjaman lebih cepat?,K07,K07,K07|K02|K06,True,0.7673103213310242,False,26.144000003114343
+hybrid,Berapa lama pengaduan saya akan dijawab?,K08,K08,K08|K01|K02,True,0.534692645072937,False,27.52359997248277
+hybrid,Siapa pemenang Piala Dunia 2022?,NONE,,,False,0.18622389435768127,True,24.244300031568855
+hybrid,Bagaimana cara membuat nasi goreng?,NONE,,,False,0.10989037156105042,True,27.53419999498874
+hybrid,Berapa harga emas hari ini?,NONE,,,False,0.21669703722000122,True,24.192599987145513
+hybrid_rerank,Berapa umur minimal untuk mengajukan KTA?,K01,K01,K01|K02|K01,True,0.8147860765457153,False,145.96890000393614
+hybrid_rerank,Berapa lama harus bekerja sebelum boleh mengajukan kredit?,K01,K01,K01|K02|K01,True,0.6598650813102722,False,155.65870003774762
+hybrid_rerank,Berapa pinjaman maksimal yang bisa diajukan?,K02,K02,K02|K01|K06,True,0.6824666261672974,False,158.95370004000142
+hybrid_rerank,Berapa batas cicilan dibanding gaji?,K02,K02,K02|K07|K06,True,0.5136333107948303,False,152.9473999980837
+hybrid_rerank,Apakah bunga bisa naik di tengah masa pinjaman?,K03,K03,K03|K07|K02,True,0.5601110458374023,False,150.200100033544
+hybrid_rerank,Apakah karyawan payroll dapat potongan bunga?,K03,K03,K03|K04|K07,True,0.5414921045303345,False,139.69159999396652
+hybrid_rerank,Kapan NPWP wajib dilampirkan?,K04,K04,K04|K02|K01,True,0.48412060737609863,False,158.40180002851412
+hybrid_rerank,"Saya wiraswasta tanpa slip gaji, dokumen apa penggantinya?",K04,K04,K04|K04|K04,True,0.5372287631034851,False,157.1688000112772
+hybrid_rerank,Skor berapa yang langsung ditolak?,K05,K05,K05|K06|K03,True,0.5636334419250488,False,158.93739997409284
+hybrid_rerank,Berapa denda kalau telat bayar cicilan?,K06,K06,K06|K02|K07,True,0.6114205121994019,False,160.2574999560602
+hybrid_rerank,Berapa penalti kalau melunasi pinjaman lebih cepat?,K07,K07,K07|K06|K02,True,0.7673103213310242,False,159.37880001729354
+hybrid_rerank,Berapa lama pengaduan saya akan dijawab?,K08,K08,K08|K04|K02,True,0.534692645072937,False,149.57519999006763
+hybrid_rerank,Siapa pemenang Piala Dunia 2022?,NONE,,,False,0.18622389435768127,True,28.33109995117411
+hybrid_rerank,Bagaimana cara membuat nasi goreng?,NONE,,,False,0.10989037156105042,True,29.873899999074638
+hybrid_rerank,Berapa harga emas hari ini?,NONE,,,False,0.21669703722000122,True,28.33729999838397

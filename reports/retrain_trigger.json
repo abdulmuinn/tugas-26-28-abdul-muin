@@ -1,0 +1,8 @@
+{
+  "retrain": true,
+  "alerts": [
+    "minggu_2: error rate 2.0% > 1%",
+    "minggu_2: drift pada age, credit_amount, duration, purpose"
+  ],
+  "next_step": "Investigasi drift, validasi kualitas label baru, dan evaluasi kandidat retraining; jangan otomatis mempromosikan model."
+}

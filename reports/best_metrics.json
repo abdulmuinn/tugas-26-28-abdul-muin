@@ -1,0 +1,9 @@
+{
+  "run_id": "52ab0dc9e8a3491cb9f94f4274230098",
+  "model": "random_forest",
+  "data_version": "42be3b82a2e5",
+  "roc_auc": 0.7629,
+  "recall_bad": 0.7222,
+  "precision_bad": 0.4887,
+  "f1_bad": 0.583
+}

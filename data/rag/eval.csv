@@ -1,0 +1,16 @@
+question,expected_doc
+Berapa umur minimal untuk mengajukan KTA?,K01
+Berapa lama harus bekerja sebelum boleh mengajukan kredit?,K01
+Berapa pinjaman maksimal yang bisa diajukan?,K02
+Berapa batas cicilan dibanding gaji?,K02
+Apakah bunga bisa naik di tengah masa pinjaman?,K03
+Apakah karyawan payroll dapat potongan bunga?,K03
+Kapan NPWP wajib dilampirkan?,K04
+"Saya wiraswasta tanpa slip gaji, dokumen apa penggantinya?",K04
+Skor berapa yang langsung ditolak?,K05
+Berapa denda kalau telat bayar cicilan?,K06
+Berapa penalti kalau melunasi pinjaman lebih cepat?,K07
+Berapa lama pengaduan saya akan dijawab?,K08
+Siapa pemenang Piala Dunia 2022?,NONE
+Bagaimana cara membuat nasi goreng?,NONE
+Berapa harga emas hari ini?,NONE

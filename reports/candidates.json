@@ -1,0 +1,37 @@
+[
+  {
+    "run_id": "d10728919298480d9882383e7b43a60d",
+    "model": "logreg",
+    "data_version": "42be3b82a2e5",
+    "roc_auc": 0.7592,
+    "recall_bad": 0.7222,
+    "precision_bad": 0.5,
+    "f1_bad": 0.5909,
+    "quality_gate": "lulus",
+    "reasons": []
+  },
+  {
+    "run_id": "52ab0dc9e8a3491cb9f94f4274230098",
+    "model": "random_forest",
+    "data_version": "42be3b82a2e5",
+    "roc_auc": 0.7629,
+    "recall_bad": 0.7222,
+    "precision_bad": 0.4887,
+    "f1_bad": 0.583,
+    "quality_gate": "lulus",
+    "reasons": []
+  },
+  {
+    "run_id": "19e87a5674ce4143a6a7523792fcd617",
+    "model": "gradient_boosting",
+    "data_version": "42be3b82a2e5",
+    "roc_auc": 0.767,
+    "recall_bad": 0.3556,
+    "precision_bad": 0.5517,
+    "f1_bad": 0.4324,
+    "quality_gate": "gagal",
+    "reasons": [
+      "recall_bad 0.356 < 0.5"
+    ]
+  }
+]
